@@ -23,6 +23,8 @@ defmodule SlimeReference.Mixfile do
 
   defp deps do
     [
+      # Slime!
+      {:slime, "~> 0.0"},
       # Automatic test runner
       {:mix_test_watch, only: :dev},
       # Style linter

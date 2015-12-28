@@ -10,7 +10,7 @@
     html
       head
         meta name="keywords" description="Slime"
-        title= site_title
+        title= String.capitalize "slime"
       body
         #id.class
           ul
@@ -21,7 +21,7 @@
     <html>
     <head>
       <meta name="keywords" description="Slime">
-      <title>Website Title</title>
+      <title>Slime</title>
     </head>
     <body>
       <div class="class" id="id">

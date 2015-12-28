@@ -1,5 +1,6 @@
 defmodule ReferenceTest do
   use ExUnit.Case
+  require Slime
 
   paths = "_data/*.yml" |> Path.wildcard
 
@@ -16,7 +17,10 @@ defmodule ReferenceTest do
     Agent.update  counter, fn x -> x + 1 end
 
     test "code example #{n} (in #{path})" do
-
+      slime    = unquote(section["slime"])
+      expected = unquote(section["output"])
+      output   = slime |> Slime.render
+      assert HTML.minify(expected) == output
     end
   end
 end
