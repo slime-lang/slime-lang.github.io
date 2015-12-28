@@ -1,43 +1,18 @@
 - title: Hello, world
-  text: >
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
-  slime: |
-    doctype html
-    html
-      head
-        meta name="keywords" description="Slime"
-        title= String.capitalize "slime"
-      body
-        #id.class
-          ul
-            = Enum.map [1, 2], fn x ->
-              li= x
+  text: Elixir can be written inline using - and =.
+
+- text: \- evalutes the expression.
+- text: = evalutes the expression, and inserts the value of the expression.
+
+- slime: |
+    - number = 40
+    p = number + 2
   output: |
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <meta name="keywords" description="Slime">
-      <title>Slime</title>
-    </head>
-    <body>
-      <div class="class" id="id">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-        </ul>
-      </div>
-    </body>
-    </html>
+    <p>42</p>
 
-
-- title: Nope
-  text: >
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
+- text: The interpolation syntax can be used to insert expressions into text.
+  slim: |
+    - name = "Felix"
+    p My cat's name is #{name}
+  output: |
+    <p>My cat's name is Felix</p>
