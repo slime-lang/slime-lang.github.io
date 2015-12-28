@@ -11,7 +11,7 @@
     <p>42</p>
 
 - text: The interpolation syntax can be used to insert expressions into text.
-  slim: |
+  slime: |
     - name = "Felix"
     p My cat's name is #{name}
   output: |
