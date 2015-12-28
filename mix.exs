@@ -15,7 +15,7 @@ defmodule SlimeReference.Mixfile do
   end
 
   def application do
-    [applications: []]
+    [applications: [:yamerl]]
   end
 
   defp elixirc_paths(:test), do: ["_test/support"]
@@ -27,6 +27,8 @@ defmodule SlimeReference.Mixfile do
       {:mix_test_watch, only: :dev},
       # Style linter
       {:dogma, only: ~w(dev test)a},
+      # yml parser
+      {:yamerl, github: "yakaz/yamerl"}
     ]
   end
 end
