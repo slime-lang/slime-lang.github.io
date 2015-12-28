@@ -1,0 +1,13 @@
+- title: Comments
+  text: Lines can be commented out using the `/` character.
+  slime: |
+    / p This line is commented out
+    p This line is not
+  output: |
+    <p>This line is not</p>
+
+- text: HTML comments can be inserted using /!
+  slime: |
+    /! Hello, world!
+  output: |
+    <!--Hello, world!-->
