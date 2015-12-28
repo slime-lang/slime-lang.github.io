@@ -17,3 +17,5 @@ exclude:
   - mix.lock
   - CNAME
   - README.md
+  - deps
+  - _build

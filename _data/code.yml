@@ -15,7 +15,7 @@
         #id.class
           ul
             = Enum.map [1, 2], fn x ->
-              li = x
+              li= x
   output: |
     <!DOCTYPE html>
     <html>
