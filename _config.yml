@@ -1,10 +1,19 @@
-# Site settings
 title: Slime
+
 description: >
   An Elixir library for rendering Slim-like templates.
+
 baseurl: ""
-url: "https://slime-lang.github.io" # the base hostname & protocol for your site
+url: "http://slime-lang.com"
+
 github_username: slime-lang
 
-# Build settings
 markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - mix.exs
+  - mix.lock
+  - CNAME
+  - README.md
