@@ -1,5 +1,4 @@
-- title: Attributes
-  text: Attributes can be assigned in similar fashion to HTML.
+- text: Attributes can be assigned in similar fashion to HTML.
   slime: a href="elixir-lang.org" target="_blank" Elixir
   output: <a href="elixir-lang.org" target="_blank">Elixir</a>
 

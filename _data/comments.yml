@@ -1,5 +1,4 @@
-- title: Comments
-  text: Lines can be commented out using the `/` character.
+- text: Lines can be commented out using the `/` character.
   slime: |
     / p This line is commented out
     p This line is not

@@ -1,5 +1,4 @@
-- title: Conditionals
-  text: We can use the regular Elixir flow control such as the if expression.
+- text: We can use the regular Elixir flow control such as the if expression.
   slime: |
     - condition = true
     = if condition do

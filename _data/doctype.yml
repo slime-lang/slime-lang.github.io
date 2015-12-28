@@ -1,5 +1,4 @@
-- title: Doctype
-  text: There are shortcuts for common doctypes.
+- text: There are shortcuts for common doctypes.
   slime: |
     doctype html
     doctype xml

@@ -5,10 +5,20 @@ description: >
 
 baseurl: ""
 url: "http://slime-lang.com"
+markdown: kramdown
+permalink: pretty
 
 github_username: slime-lang
 
-markdown: kramdown
+
+sections:
+  - attributes
+  - code
+  - comments
+  - conditionals
+  - doctype
+  - iteration
+
 
 exclude:
   - Gemfile
