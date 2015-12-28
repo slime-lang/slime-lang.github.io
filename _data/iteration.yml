@@ -1,0 +1,20 @@
+- title: Iteration
+  text: >
+    Elixir's collection manipulation expressions can be used to iterate over
+    collections in your templates.
+  slime: |
+    - names = ["Sarah", "Mia", "Harry"]
+    = Enum.map names, fn name ->
+      p= name
+  output: |
+    <p>Sarah</p>
+    <p>Mia</p>
+    <p>Harry</p>
+  slime: |
+    - names = ["Sarah", "Mia", "Harry"]
+    = for name <- names do
+      p= name
+  output: |
+    <p>Sarah</p>
+    <p>Mia</p>
+    <p>Harry</p>

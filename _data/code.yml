@@ -1,8 +1,8 @@
-- title: Hello, world
+- title: Elixir Code
   text: Elixir can be written inline using - and =.
 
-- text: \- evalutes the expression.
-- text: = evalutes the expression, and inserts the value of the expression.
+- text: "- evalutes the expression."
+- text: "= evalutes the expression, and inserts the value of the expression."
 
 - slime: |
     - number = 40
