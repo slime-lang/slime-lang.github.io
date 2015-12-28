@@ -4,6 +4,26 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Slime</h1>
+{% for section in site.data.code %}
+  <div>
+    {% if section.title %}
+    <h2>
+      {{ section.title }}
+    </h2>
+    {% endif %}
+
+    {% if section.text %}
+    <p>
+      {{ section.text }}
+    </p>
+    {% endif %}
+
+    {% if section.slime and section.output %}
+    {% highlight slim %}{{ section.slime }}{% endhighlight %}
+    {% highlight html %}{{ section.output }}{% endhighlight %}
+    {% endif %}
+
+  </div>
+{% endfor %}
 
 </div>

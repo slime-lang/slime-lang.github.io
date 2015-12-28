@@ -1,0 +1,34 @@
+- title: Hello, world
+  text: >
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+    amet.
+  slime: |
+    doctype html
+    html
+      head
+        meta name="keywords" description="Slime"
+        title= site_title
+      body
+        #id.class
+          ul
+            = Enum.map [1, 2], fn x ->
+              li = x
+  output: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta name="keywords" description="Slime">
+      <title>Website Title</title>
+    </head>
+    <body>
+      <div class="class" id="id">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+        </ul>
+      </div>
+    </body>
+    </html>
