@@ -9,12 +9,17 @@ defmodule SlimeReference.Mixfile do
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       deps: deps,
+      test_paths: ["_test"],
+      elixirc_paths: elixirc_paths(Mix.env),
    ]
   end
 
   def application do
     [applications: []]
   end
+
+  defp elixirc_paths(:test), do: ["_test/support"]
+  defp elixirc_paths(_),     do: []
 
   defp deps do
     [
