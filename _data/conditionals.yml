@@ -1,0 +1,10 @@
+- title: Conditionals
+  text: We can use the regular Elixir flow control such as the if expression.
+  slime: |
+    - condition = true
+    = if condition do
+      p It was true.
+    - else
+      p It was false.
+  output: |
+    <p>It was true.</p>
