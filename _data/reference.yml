@@ -1,0 +1,165 @@
+-
+  title: Attributes
+  examples:
+    -
+      text: "Attributes can be assigned in similar fashion to output:"
+      slime: a href="elixir-lang.org" target="_blank" Elixir
+      output: <a href="elixir-lang.org" target="_blank">Elixir</a>
+
+    -
+      text: >
+        Elixir expressions can be used as attribute values using
+        the interpolation syntax:
+      slime: |
+        - my_variable = "elixir-lang.org"
+        a href="#{my_variable}" Elixir
+      output: |
+        <a href="elixir-lang.org">Elixir</a>
+
+    -
+      text: "Boolean attributes can be set using boolean values:"
+      slime: |
+        input type="checkbox" checked=true
+        input type="checkbox" checked=false
+      output: |
+        <input type="checkbox" checked>
+        <input type="checkbox">
+
+    -
+      text: "There is a literal syntax for class and id attributes:"
+      slime: |
+        .foo.bar
+        select.bar
+        #foo
+        body#bar
+      output: |
+        <div class="foo bar"></div>
+        <select class="bar"></select>
+        <div id="foo"></div>
+        <body id="bar"></body>
+
+-
+  title: Elixir code
+  examples:
+    -
+      text: |
+        Elixir can be written inline using - and =.<br>
+        - evalutes the expression.<br>
+        = evalutes the expression, and inserts the value of the expression.
+      slime: |
+        - number = 40
+        p = number + 2
+      output: |
+        <p>42</p>
+
+    -
+      text: "The interpolation syntax can be used to insert expressions into text:"
+      slime: |
+        - name = "Felix"
+        p My cat's name is #{name}
+      output: |
+        <p>My cat's name is Felix</p>
+
+-
+  title: Comments
+  examples:
+    -
+      text: "Lines can be commented out using the `/` character:"
+      slime: |
+        / p This line is commented out
+        p This line is not
+      output: |
+        <p>This line is not</p>
+
+    -
+      text: HTML comments can be inserted using /!
+      slime: |
+        /! Hello, world!
+      output: |
+        <!--Hello, world!-->
+
+-
+  title: Conditionals
+  examples:
+    -
+      text: "We can use the regular Elixir flow control such as the if expression:"
+      slime: |
+        - condition = true
+        = if condition do
+          p It was true.
+        - else
+          p It was false.
+      output: |
+        <p>It was true.</p>
+
+-
+  title: Doctypes
+  examples:
+    -
+      text: "There are shortcuts for common doctypes:"
+      slime: |
+        doctype html
+        doctype xml
+        doctype transitional
+        doctype strict
+        doctype frameset
+        doctype 1.1
+        doctype basic
+        doctype mobile
+      output: |
+        <!DOCTYPE html>
+        <?xml version="1.0" encoding="utf-8" ?>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+        <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+
+-
+  title: Iteration
+  examples:
+    -
+      text: >
+        Elixir's collection manipulation expressions can be used to iterate over
+        collections in your templates:
+      slime: |
+        / with Enum.map:
+        - names = ["Sarah", "Mia", "Harry"]
+        = Enum.map names, fn name ->
+          p= name
+      output: |
+        <p>Sarah</p>
+        <p>Mia</p>
+        <p>Harry</p>
+    -
+      slime: |
+        / or with comprehension
+        - names = ["Sarah", "Mia", "Harry"]
+        = for name <- names do
+          p= name
+      output: |
+        <p>Sarah</p>
+        <p>Mia</p>
+        <p>Harry</p>
+
+-
+  title: Embedded engines
+  id: embedded_engines
+  examples:
+    -
+      slime: |
+        javascript:
+          console.log("Test javascript");
+
+        css:
+          body {
+            color: black;
+          }
+
+        elixir:
+          a = [1, 2, 3]
+          b = Enum.map(a, &(&1 + 1))
+
+        eex:
+          Hello from <%= "eex" %>

@@ -1,0 +1,31 @@
+---
+layout: page
+title: Reference
+---
+
+<div class="row">
+  <div class="col-sm-8">
+    {% for section in site.data.reference %}
+      <h2 class="reference-section-header">
+        {{ section.title }}
+      </h2>
+
+      {% for example in section.examples %}
+
+        {% if example.text %}
+          <p>
+            {{ example.text }}
+          </p>
+        {% endif %}
+
+        <div class="example-source">
+          {% highlight slim %}{{ example.slime }}{% endhighlight %}
+        </div>
+        <div class="example-output">
+          {% highlight html %}{{ example.output }}{% endhighlight %}
+        </div>
+
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>

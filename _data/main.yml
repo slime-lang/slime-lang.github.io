@@ -1,0 +1,3 @@
+slim: |
+  - my_variable = "elixir-lang.org"
+  a href="#{my_variable}" Elixir
