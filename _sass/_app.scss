@@ -8,11 +8,12 @@
   }
 }
 
-.reference-section-header {
-  margin-top: 2em;
-  &:first-child {
-    margin-top: 0;
-  }
+.reference-section + .reference-section {
+  margin-top: 4em;
+}
+
+.reference-example + .reference-example {
+  margin-top: 2em
 }
 
 .reference-sidemenu {
