@@ -1,5 +1,6 @@
 -
   title: Attributes
+  id: attributes
   examples:
     -
       text: "Attributes can be assigned in similar fashion to output:"
@@ -40,6 +41,7 @@
 
 -
   title: Elixir code
+  id: elixir_code
   examples:
     -
       text: |
@@ -62,6 +64,7 @@
 
 -
   title: Comments
+  id: comments
   examples:
     -
       text: "Lines can be commented out using the `/` character:"
@@ -80,6 +83,7 @@
 
 -
   title: Conditionals
+  id: conditionals
   examples:
     -
       text: "We can use the regular Elixir flow control such as the if expression:"
@@ -94,6 +98,7 @@
 
 -
   title: Doctypes
+  id: doctypes
   examples:
     -
       text: "There are shortcuts for common doctypes:"
@@ -118,6 +123,7 @@
 
 -
   title: Iteration
+  id: iteration
   examples:
     -
       text: >
