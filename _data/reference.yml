@@ -2,13 +2,11 @@
   title: Attributes
   id: attributes
   examples:
-    -
-      text: "Attributes can be assigned in similar fashion to output:"
+    - text: "Attributes can be assigned in similar fashion to output:"
       slime: a href="elixir-lang.org" target="_blank" Elixir
       output: <a href="elixir-lang.org" target="_blank">Elixir</a>
 
-    -
-      text: >
+    - text: >
         Elixir expressions can be used as attribute values using
         the interpolation syntax:
       slime: |
@@ -18,7 +16,8 @@
         <a href="elixir-lang.org">Elixir</a>
 
     -
-      text: "Boolean attributes can be set using boolean values:"
+      text: >
+        Boolean attributes can be set using boolean values:
       slime: |
         input type="checkbox" checked=true
         input type="checkbox" checked=false

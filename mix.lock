@@ -1,6 +1,6 @@
-%{"dogma": {:hex, :dogma, "0.0.11"},
-  "fs": {:hex, :fs, "0.9.2"},
-  "mix_test_watch": {:hex, :mix_test_watch, "0.2.4"},
-  "poison": {:hex, :poison, "1.5.0"},
-  "slime": {:hex, :slime, "0.11.0"},
+%{"dogma": {:hex, :dogma, "0.0.11", "1396bfe10a962b5c5b0468eba6eb3be85d693d55f2d698fda29660a059eb2180", [:mix], [{:poison, "~> 1.0", [hex: :poison, optional: false]}]},
+  "fs": {:hex, :fs, "0.9.2", "ed17036c26c3f70ac49781ed9220a50c36775c6ca2cf8182d123b6566e49ec59", [:rebar], []},
+  "mix_test_watch": {:hex, :mix_test_watch, "0.2.4", "a4a35d1c11ebcb12f2339b226ec0746333a3f7a926775977506ca5ad02ef5bce", [:mix], [{:fs, "~> 0.9.1", [hex: :fs, optional: false]}]},
+  "poison": {:hex, :poison, "1.5.0", "f2f4f460623a6f154683abae34352525e1d918380267cdbd949a07ba57503248", [:mix], []},
+  "slime": {:hex, :slime, "0.11.0", "098922eb645d57c9ae6d869139939441e29e61aab5da541de518e830bc61a54e", [:mix], []},
   "yamerl": {:git, "https://github.com/yakaz/yamerl.git", "ae810a808817d9482b4628ae3e20d746e3729fe0", []}}
