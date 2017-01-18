@@ -1,0 +1,39 @@
+---
+layout: page
+title: Phoenix integration
+order: 2
+---
+
+Phoenix integration is provided by <a href="https://github.com/slime-lang/phoenix_slime">phoenix_slime</a>.
+
+<h2 class="page-subheader">Usage</h2>
+
+<ol>
+  <li>Add <code>{:phoenix_slime, "~&gt; 0.8.0"}</code> to your deps in <code>mix.exs</code>.</li>
+  <li>Add the following to your project's <code>config/config.exs</code>:</li>
+</ol>
+
+{% highlight elixir %}{{ site.data.phoenix_integration.config_exs }}{% endhighlight %}
+
+
+<h2 class="page-subheader">Live Reload</h2>
+<p>In <code>my_app/config/dev.exs</code>, include the <code>slim</code> and <code>slime</code> extensions in the list of watched files:</p>
+
+{% highlight elixir %}{{ site.data.phoenix_integration.live_reload }}{% endhighlight %}
+
+
+<h2 class="page-subheader">Generators</h2>
+
+<p>This library also includes two <code>mix</code> tasks:</p>
+
+<ul>
+  <li><code>mix phoenix.gen.html.slime</code></li>
+  <li><code>mix phoenix.gen.layout.slime</code></li>
+</ul>
+
+<p>The first task creates a html resource in the same way <code>phoenix.gen.html</code> does
+with the exception that all files are <code>.slim</code> files instead of <code>.eex</code> files.</p>
+
+<p>The second task creates a new <code>web/templates/layout/app.html.slim</code> with the
+exact same content as the <code>app.html.eex</code> file. Do not forget to remove the old
+<code>app.html.eex</code> file.</p>
