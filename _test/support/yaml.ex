@@ -1,4 +1,8 @@
 defmodule YAML do
+  @moduledoc """
+  Read YAML files and convert them to maps
+  """
+
   def read(file) do
     file
     |> :yamerl_constr.file
