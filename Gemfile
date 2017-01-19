@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '= 2.4.0' # https://pages.github.com/versions/
+gem 'jekyll', '= 3.3.1' # https://pages.github.com/versions/
