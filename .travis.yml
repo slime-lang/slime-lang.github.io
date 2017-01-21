@@ -17,6 +17,9 @@ before_script:
   - gem install bundler
   - bundle install
 
+before_install:
+  - rvm install 2.2
+
 script:
   - mix test
   - mix dogma
